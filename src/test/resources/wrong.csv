@@ -1,0 +1,8 @@
+querystring,limit,offset
+112,10,1
+Animals,string,25
+Animals,10,string
+Animals,-10,1
+Animals,10,-10
+Animals,2247483647,0
+Animals,10,2247483647

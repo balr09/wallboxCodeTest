@@ -1,0 +1,6 @@
+querystring,limit,offset,datasize,expectedStatusCode
+Animals,10,0,10,200
+Animals,10,5,10,200
+Animals,2147483647,0,-1,200
+Animals,10,4999,-1,200
+Animals,10,5001,-1,200
