@@ -8,7 +8,7 @@ It's been years since I last used Whatsapp app, so I may be missing some feature
 
 ## Answer
 
-* Preconditions: 
+Preconditions: 
 
 1. I'll use a phone with previous version already installed and working, with chats created and populated. That's beacuse breaking app for current users is much worse than not allowing new users to join. If after performing the below steps we still have time we can use it to install app from scratch and do some of that steps.
 2. A collegue will stand by me holding a phone with the previous version installed and an open chat with me.
@@ -43,10 +43,14 @@ At  this point I'm pretty sure you run out of time.
 **Question**: How would you:
 - Login (SSH) into a server with IP 45.65.34.23, user root and a private key / identity
 file called "MyPrivateKey.key"
-- Go to folder "/var/logs"
-- Show on console the latest 30 lines of the file "super-app.log"
 
 > ssh -i MyPrivateKey.key root@45.65.34.23
+
+- Go to folder "/var/logs"
+
 > cd /var/logs
+
+- Show on console the latest 30 lines of the file "super-app.log"
+
 > tail -n 30 super-app.log
 
