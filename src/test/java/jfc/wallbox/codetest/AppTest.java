@@ -106,6 +106,7 @@ public class AppTest {
 		return String.format("https://%s/%s", urlbase, path);
 	}
 	
+	// the configuration mechanism may be improved...
 	@BeforeAll
 	public static void loadProperties() {
 		props = new Properties();
