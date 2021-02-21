@@ -25,9 +25,13 @@ A total of 14 tests are being run. If any request had ever been successful the r
 
 In order to execute tests you need (locally):
 
-1. JDK 9+
-2. Maven 3.6
+1. JDK 9+ (added to PATH)
+2. Maven 3.6 (added to PATH)
 3. Internet connection
+
+# How to install
+
+To locally install project jus clone this project or download and unzip it to a local folder of your choice.
 
 # How to execute test
 
