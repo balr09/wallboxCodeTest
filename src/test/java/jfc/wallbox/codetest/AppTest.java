@@ -1,18 +1,16 @@
 package jfc.wallbox.codetest;
 
-import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.hasSize;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.IOException;
+import java.util.Properties;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-
-import groovy.util.logging.Log;
 
 /**
  * Unit test for simple App.
@@ -20,8 +18,10 @@ import groovy.util.logging.Log;
 
 public class AppTest {
 	private static String apiKey = "dc6zaTOxFJmzC";
-
-	private static String urlbase = "api.giphy.com/v1/stickers";
+	private static Properties props;
+	
+	private static String urlbase;
+	// private static String urlbase = "api.giphy.com/v1/stickers";
 	// there's a second url for search endpoint that responds with message: "You cannot consume this service"; 
 	// so will only use stickers search...
 	// private static String urlbase = "api.giphy.com/v1/gifs";
@@ -104,5 +104,18 @@ public class AppTest {
 	// helper
 	public String getUrl(String path) {
 		return String.format("https://%s/%s", urlbase, path);
+	}
+	
+	@BeforeAll
+	public static void loadProperties() {
+		props = new Properties();
+		try {
+			props.load(AppTest.class.getResourceAsStream("/test.properties"));
+			
+			urlbase = props.getProperty("testHost");
+		} catch (IOException e) {
+			// should add logger here:
+			e.printStackTrace();
+		}
 	}
 }
