@@ -11,7 +11,7 @@
 
 	<name>codetest</name>
 	<!-- FIXME change it to the project's website -->
-	<url>https://github.com</url>
+	<url>https://github.com/balr09/wallboxCodeTest</url>
 
 	<properties>
 		<junit.jupiter.version>5.3.2</junit.jupiter.version>
